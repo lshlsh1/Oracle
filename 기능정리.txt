@@ -1,0 +1,35 @@
+FROM WHERE GROUPBY HAVING SELECT ORDERBY
+
+-- 변경할 때 사용하는 구문
+-- alter - 구조적 변경
+-- update - 데이터 변경,수정
+
+-- 없던 것을  새로 생성하게 만드는 구문 두가지
+-- INSERT - 데이터 삽입해야할 때 사용하는 구문
+-- CREATE - 구조적(물리적)으로 없던것을 새로 만드는 구문
+
+-- 삭제할 때 사용하는 구문
+--DELETE -데이터삭제
+--DROP - 구조적삭제
+
+컬럼 추가
+ALTER TABLE ~
+ADD
+컬럼 제거
+ALTER TABLE ~
+DROP 
+
+권한 부여
+GRANT CREATE TABLE TO LSH
+
+권한 박탈
+revoke sysdba from hr
+
+할당량지정
+ALTER USER LSH
+QUOTA UNLIMITED ON TBS_EDUA;
+
+--항목 - 컬럼  / 한 줄 - 레코드 
+--아직은 '테이블'을 표로 이해하기
+--테이블스페이스
+--데이터베이스
