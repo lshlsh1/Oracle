@@ -542,11 +542,13 @@ FROM TBL_INSA
 )T
 GROUP BY T.부서, T.인원수
 ORDER BY T.부서, T.인원수;
---HAVING T.인원수>=5;
+HAVING T.인원수>=5;
 
 52. 이름, 성별, 나이 조회
     성별: 주민번호 활용 1,3 → 남자, 2,4 → 여자 (DECODE() 사용)
     나이: 주민번호 활용
+SELECT DECODE(SUBSTR(SSN,8,1),'1','남자','3','남자','여자')"인원수", BUSEO"부서"
+FROM TBL_INSA;
 
 53. 서울 사람 중에서 기본급이 200만원 이상인 사람 조회. 
     ( 이름, 기본급 )
